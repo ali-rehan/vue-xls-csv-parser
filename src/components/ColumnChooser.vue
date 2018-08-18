@@ -155,7 +155,7 @@
         } else {
           this.localUserColumns.forEach((column) => {
             column.name = column.data.shift(); // eslint-disable-line
-            column.displayedData = _.take(column.data, 4); // eslint-disable-line
+            column.displayedData = _.take(column.data, 2); // eslint-disable-line
           });
         }
         this.withHeaders = !this.withHeaders;
