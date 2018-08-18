@@ -138,7 +138,7 @@
       fillLocalUserColumns(newColumns) {
         this.localUserColumns = newColumns.map(column => ({
           name: column.name,
-          displayedData: _.take(column.data, 4),
+          displayedData: _.take(column.data, 2),
           data: column.data,
           options: _.clone(this.columns),
           selection: null,
@@ -150,7 +150,7 @@
             const data = [column.name].concat(column.data);
             column.name = `${text[this.lang].column} ${index + 1}`; // eslint-disable-line
             column.data = data; // eslint-disable-line
-            column.displayedData = _.take(column.data, 4); // eslint-disable-line
+            column.displayedData = _.take(column.data, 2); // eslint-disable-line
           });
         } else {
           this.localUserColumns.forEach((column) => {
